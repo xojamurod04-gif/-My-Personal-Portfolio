@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Arslanov Xo'jamurod — Full Stack Developer</title>
   <meta name="description" content="Arslanov Xo'jamurod — Full Stack Developer. Python, React, Flutter, Node.js va AI texnologiyalari bo'yicha ixtisoslashgan dasturchi." />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Arslanov Xo'jamurod — Full Stack Developer" />
+  <meta property="og:description" content="Zamonaviy veb va mobil ilovalar, AI-asosidagi tizimlar yaratuvchi Full Stack Developer." />
+  <meta property="og:image" content="https://xojamurod04-gif.github.io/-My-Personal-Portfolio/photo.png" />
+  <meta property="og:url" content="https://xojamurod04-gif.github.io/-My-Personal-Portfolio/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Arslanov Xo'jamurod — Full Stack Developer" />
+  <meta name="twitter:description" content="Zamonaviy veb va mobil ilovalar, AI-asosidagi tizimlar yaratuvchi Full Stack Developer." />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -395,6 +404,24 @@
       transition: opacity 0.7s ease, transform 0.7s ease;
     }
     .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    /* ═══ DISABLED BUTTON ═══ */
+    .proj-btn-soon {
+      display: flex; align-items: center; gap: 7px;
+      padding: 9px 20px; border-radius: 9px; font-size: 13px; font-weight: 600;
+      background: rgba(255,255,255,0.04); color: var(--gray2);
+      border: 1px dashed rgba(255,255,255,0.1); cursor: not-allowed;
+      pointer-events: none; user-select: none;
+    }
+    /* ═══ CV BUTTON ═══ */
+    .btn-cv {
+      padding: 14px 32px; border-radius: 10px; font-size: 14px; font-weight: 600;
+      background: transparent; color: var(--white);
+      border: 1.5px solid rgba(255,255,255,0.15);
+      cursor: pointer; transition: all 0.3s; text-decoration: none;
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    .btn-cv:hover { border-color: var(--purple-light); background: rgba(108,58,237,0.1); transform: translateY(-3px); }
   </style>
 </head>
 <body>
@@ -409,7 +436,6 @@
   <div class="logo"><span>Xo'jamurod</span></div>
   <ul class="nav-links">
     <li><a href="#about">Haqimda</a></li>
-    <li><a href="#about">Tajriba</a></li>
     <li><a href="#projects">Loyihalar</a></li>
     <li><a href="#contact">Aloqa</a></li>
   </ul>
@@ -433,9 +459,9 @@
       <button class="btn-main" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">
         💼 Loyihalarni Ko'rish
       </button>
-      <button class="btn-outline" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
-        📩 Bog'lanish
-      </button>
+      <a href="#" class="btn-cv" aria-label="CV yuklab olish" title="Rezyume hali tayyorlanmoqda">
+        📄 CV Yuklab Olish
+      </a>
     </div>
   </div>
 
@@ -443,7 +469,7 @@
     <div class="avatar-container">
       <div class="avatar-glow"></div>
       <div class="avatar-circle">
-        <img src="photo.png" alt="Arslanov Xo'jamurod" style="width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:50%;" />
+        <img src="photo.png" alt="Arslanov Xo'jamurod — Full Stack Developer" width="300" height="300" style="width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:50%;" />
       </div>
       <!-- Floating tags -->
       <div class="ftag f1"><div class="ftag-dot"></div>React Native</div>
@@ -469,8 +495,8 @@
     <div class="stat-label">Production App</div>
   </div>
   <div class="stat-item">
-    <div class="stat-num">100%</div>
-    <div class="stat-label">Sifatli Kod</div>
+    <div class="stat-num">10+</div>
+    <div class="stat-label">Texnologiyalar</div>
   </div>
 </div>
 
@@ -556,8 +582,8 @@
         <h3 class="proj-title">AI-CRM</h3>
         <p class="proj-desc">Telefon qo'ng'iroqlari, Telegram va Instagram orqali bo'ladigan mijozlar muloqotini AI yordamida avtomatik tahlil qiluvchi va operatorlar samaradorligini baholovchi CRM tizimi.</p>
         <div class="proj-actions">
-          <a href="#" class="proj-btn-live">🌐 Ko'rish</a>
-          <a href="#" class="proj-btn-code">⌨ Kod</a>
+          <span class="proj-btn-soon" title="Tez kunda">🔒 Tez kunda</span>
+          <span class="proj-btn-soon" title="Yopiq loyiha">🔒 Yopiq</span>
         </div>
       </div>
     </div>
@@ -591,8 +617,8 @@
         <h3 class="proj-title">Bozor Bot</h3>
         <p class="proj-desc">Fond bozorini real vaqtda kuzatish, investitsiya portfelini tahlil qilish va AI yordamida aksiyalar bo'yicha prognozlar olish uchun Telegram Bot va Mini App platforma.</p>
         <div class="proj-actions">
-          <a href="#" class="proj-btn-live">🌐 Ko'rish</a>
-          <a href="https://github.com/xojamurod04-gif/bozor-terminal-bot" target="_blank" class="proj-btn-code">⌨ Kod</a>
+          <span class="proj-btn-soon" title="Tez kunda">🔒 Tez kunda</span>
+          <a href="https://github.com/xojamurod04-gif/bozor-terminal-bot" target="_blank" rel="noopener noreferrer" class="proj-btn-code" aria-label="Bozor Bot GitHub kodi">⌨ Kod</a>
         </div>
       </div>
     </div>
@@ -629,8 +655,8 @@
         <h3 class="proj-title">Habit Tracker</h3>
         <p class="proj-desc">Kundalik foydali odatlarni shakllantirish, shaxsiy unumdorlikni nazorat qilish va bajarilgan vazifalar statistikasini yuritish uchun mobil ilova — Google Play'da mavjud.</p>
         <div class="proj-actions">
-          <a href="#" class="proj-btn-live">🌐 Ko'rish</a>
-          <a href="https://github.com/xojamurod04-gif/my-app" target="_blank" class="proj-btn-code">⌨ Kod</a>
+          <span class="proj-btn-soon" title="Google Play linki tez kunda">🔒 Tez kunda</span>
+          <a href="https://github.com/xojamurod04-gif/my-app" target="_blank" rel="noopener noreferrer" class="proj-btn-code" aria-label="Habit Tracker GitHub kodi">⌨ Kod</a>
         </div>
       </div>
     </div>
@@ -642,21 +668,23 @@
 <section class="contact" id="contact">
   <div class="contact-inner fade-up">
     <div class="section-tag" style="text-align:center;margin-bottom:16px;">Aloqa</div>
-    <h2 class="contact-title">Birgalikda <span class="accent">Nimadir</span> Qurамiz?</h2>
+    <h2 class="contact-title">Birgalikda <span class="accent">Nimadir</span> Quramiz?</h2>
     <p class="contact-sub">Loyihangiz haqida gapirishga tayyorman. Menga yozing — 24 soat ichida javob beraman!</p>
     <a href="mailto:xojamurod04@gmail.com" class="contact-email">xojamurod04@gmail.com</a>
     <div class="social-row">
-      <a href="https://github.com/xojamurod04-gif" target="_blank" class="soc-btn" title="GitHub">🐙</a>
-      <a href="https://t.me/arslonov2315" target="_blank" class="soc-btn" title="Telegram">✈️</a>
-      <a href="https://www.instagram.com/arslonov_xojamurod" target="_blank" class="soc-btn" title="Instagram">📸</a>
+      <a href="https://github.com/xojamurod04-gif" target="_blank" rel="noopener noreferrer" class="soc-btn" title="GitHub" aria-label="GitHub profili">🐙</a>
+      <a href="https://t.me/arslonov2315" target="_blank" rel="noopener noreferrer" class="soc-btn" title="Telegram" aria-label="Telegram">✈️</a>
+      <a href="https://www.instagram.com/arslonov_xojamurod" target="_blank" rel="noopener noreferrer" class="soc-btn" title="Instagram" aria-label="Instagram">📸</a>
+      <a href="https://linkedin.com/in/xojamurod-arslanov" target="_blank" rel="noopener noreferrer" class="soc-btn" title="LinkedIn" aria-label="LinkedIn">💼</a>
     </div>
-    <a href="mailto:xojamurod04@gmail.com" style="text-decoration:none;display:block"><button class="contact-btn">✉️ Xabar Yuborish</button></a>
+    <a href="mailto:xojamurod04@gmail.com" style="text-decoration:none;display:block" aria-label="Email yuborish"><button class="contact-btn">✉️ Xabar Yuborish</button></a>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
   <p>© 2026 <span class="fhighlight">Arslanov Xo'jamurod</span>. Barcha huquqlar himoyalangan. Muhabbat bilan yaratildi ❤️</p>
+  <p style="margin-top:8px;font-size:12px;"><a href="https://github.com/xojamurod04-gif/-My-Personal-Portfolio" target="_blank" rel="noopener noreferrer" style="color:var(--gray2);text-decoration:none;">GitHub'da ochiq manba ↗</a></p>
 </footer>
 
 <!-- Scroll to top -->
