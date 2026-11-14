@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arslanov Xo'jamurod — CV / Rezyume</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+      background: #f0f0f0;
+      color: #111;
+      font-size: 13.5px;
+      line-height: 1.55;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 20px auto;
+      background: #fff;
+      padding: 18mm 18mm 16mm;
+      box-shadow: 0 4px 32px rgba(0,0,0,0.12);
+    }
+
+    /* ═══ HEADER ═══ */
+    .cv-header { margin-bottom: 16px; }
+    .cv-name {
+      font-size: 28px; font-weight: 800; letter-spacing: -0.5px;
+      color: #0f0f0f; text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .cv-title {
+      font-size: 14px; font-weight: 600;
+      color: #6C3AED; margin-bottom: 10px;
+      letter-spacing: 0.2px;
+    }
+    .cv-contacts {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 3px 20px; font-size: 12.5px; color: #333;
+    }
+    .cv-contacts a { color: #6C3AED; text-decoration: none; }
+    .cv-contacts a:hover { text-decoration: underline; }
+    .cv-contacts .label { font-weight: 600; color: #555; }
+
+    hr.divider {
+      border: none; border-top: 2px solid #111;
+      margin: 14px 0 14px;
+    }
+    hr.divider-light {
+      border: none; border-top: 1px solid #e0e0e0;
+      margin: 10px 0;
+    }
+
+    /* ═══ SECTION ═══ */
+    .cv-section { margin-bottom: 18px; }
+    .cv-section-title {
+      font-size: 13px; font-weight: 800; letter-spacing: 1.2px;
+      text-transform: uppercase; color: #0f0f0f;
+      margin-bottom: 10px; padding-bottom: 5px;
+      border-bottom: 1.5px solid #111;
+    }
+
+    /* PROFIL */
+    .cv-profil p { color: #333; text-align: justify; }
+
+    /* SKILLS TABLE */
+    .skills-table { width: 100%; border-collapse: collapse; }
+    .skills-table th, .skills-table td {
+      padding: 8px 12px; text-align: left; vertical-align: top;
+      border: 1px solid #e0e0e0; font-size: 12.5px;
+    }
+    .skills-table th {
+      background: #f8f8f8; font-weight: 700; color: #333;
+      font-size: 12px;
+    }
+    .skills-table td:first-child { font-weight: 600; color: #111; width: 36%; }
+    .skills-table td:last-child { color: #444; }
+    .skills-table tr:hover td { background: #fafafa; }
+
+    /* PROJECTS */
+    .proj-item { margin-bottom: 14px; }
+    .proj-header {
+      display: flex; justify-content: space-between; align-items: flex-start;
+      flex-wrap: wrap; gap: 4px; margin-bottom: 3px;
+    }
+    .proj-name {
+      font-size: 13.5px; font-weight: 700; color: #0f0f0f;
+    }
+    .proj-links { font-size: 11.5px; color: #6C3AED; white-space: nowrap; }
+    .proj-links a { color: #6C3AED; text-decoration: none; margin-left: 8px; }
+    .proj-links a:hover { text-decoration: underline; }
+    .proj-direction {
+      font-size: 11.5px; font-weight: 600; color: #6C3AED;
+      margin-bottom: 4px;
+    }
+    .proj-direction::before { content: "Yo'nalish: "; color: #888; font-weight: 500; }
+    .proj-desc { font-size: 12.5px; color: #444; line-height: 1.55; }
+
+    /* EDUCATION / EXTRA */
+    .info-list { list-style: none; }
+    .info-list li {
+      padding: 5px 0; font-size: 12.5px; color: #333;
+      border-bottom: 1px solid #f0f0f0; display: flex; gap: 8px;
+    }
+    .info-list li:last-child { border-bottom: none; }
+    .info-label { font-weight: 700; color: #111; min-width: 100px; flex-shrink: 0; }
+
+    /* PRINT BUTTON */
+    .print-bar {
+      width: 210mm; margin: 0 auto 10px;
+      display: flex; gap: 12px; justify-content: flex-end;
+    }
+    .print-btn {
+      padding: 10px 24px; border-radius: 8px; border: none;
+      font-size: 13px; font-weight: 700; cursor: pointer; transition: all 0.2s;
+    }
+    .print-btn.primary {
+      background: #6C3AED; color: white;
+      box-shadow: 0 4px 16px rgba(108,58,237,0.3);
+    }
+    .print-btn.primary:hover { background: #5a2fd4; }
+    .print-btn.secondary {
+      background: white; color: #333;
+      border: 1px solid #ddd;
+    }
+    .print-btn.secondary:hover { background: #f5f5f5; }
+
+    /* FOOTER */
+    .cv-footer {
+      margin-top: 24px; padding-top: 10px;
+      border-top: 1px solid #e0e0e0;
+      display: flex; justify-content: space-between;
+      font-size: 11px; color: #aaa;
+    }
+
+    @media print {
+      body { background: white; }
+      .print-bar { display: none; }
+      .page {
+        margin: 0; box-shadow: none;
+        padding: 15mm 15mm 12mm;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Print bar -->
+<div class="print-bar">
+  <button class="print-btn secondary" onclick="window.history.back()">← Orqaga</button>
+  <button class="print-btn primary" onclick="window.print()">🖨️ PDF sifatida saqlash</button>
+</div>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="cv-header">
+    <div class="cv-name">Arslanov Xo'jamurod</div>
+    <div class="cv-title">Full Stack, Mobile &amp; AI Developer</div>
+    <div class="cv-contacts">
+      <div><span class="label">Portfolio:</span> <a href="https://xojamurod04-gif.github.io/-My-Personal-Portfolio/" target="_blank">xojamurod04-gif.github.io</a></div>
+      <div><span class="label">GitHub:</span> <a href="https://github.com/xojamurod04-gif" target="_blank">github.com/xojamurod04-gif</a></div>
+      <div><span class="label">LinkedIn:</span> <a href="https://www.linkedin.com/in/xojamurod-arslanov-b34095340" target="_blank">linkedin.com/in/xojamurod-arslanov</a></div>
+      <div><span class="label">Telegram:</span> <a href="https://t.me/arslonov2315" target="_blank">@arslonov2315</a></div>
+      <div><span class="label">Email:</span> <a href="mailto:xojamurod04@gmail.com">xojamurod04@gmail.com</a></div>
+      <div><span class="label">Telefon:</span> +998 93 290-23-15</div>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- PROFIL -->
+  <div class="cv-section cv-profil">
+    <div class="cv-section-title">Profil</div>
+    <p>
+      Zamonaviy veb-ilovalar, mobil dasturlar hamda sun'iy intellekt (AI) integratsiyasiga asoslangan dasturiy yechimlarni ishlab chiquvchi dasturchi. Biznes jarayonlarini avtomatlashtirish, murakkab Telegram-bot tizimlarini qurish va foydalanuvchilar uchun qulay interfeyslar yaratish bo'yicha amaliy tajribaga ega. Toza arxitektura, yuqori ishlash tezligi va natijaga yo'naltirilgan dasturiy mahsulotlar yaratishga ixtisoslashgan.
+    </p>
+  </div>
+
+  <!-- TEXNIK KO'NIKMALAR -->
+  <div class="cv-section">
+    <div class="cv-section-title">Texnik Ko'nikmalar</div>
+    <table class="skills-table">
+      <thead>
+        <tr>
+          <th>Yo'nalish</th>
+          <th>Texnologiyalar va Vositalar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Full Stack Development</td>
+          <td>JavaScript (ES6+), TypeScript, Python, HTML5, CSS3, RESTful API, Backend va ma'lumotlar bazasi arxitekturasi</td>
+        </tr>
+        <tr>
+          <td>Frameworks &amp; Libraries</td>
+          <td>React, Next.js, React Native, Flutter / Dart, Node.js, Express, FastAPI, Django</td>
+        </tr>
+        <tr>
+          <td>Mobile Development</td>
+          <td>Kross-platforma va mobil ilovalar ishlab chiqish, UI/UX dizayn integratsiyasi, Google Play nashr jarayonlari</td>
+        </tr>
+        <tr>
+          <td>AI &amp; Avtomatlashtirish</td>
+          <td>Sun'iy intellekt API integratsiyalari (LLM, Claude AI), murakkab Telegram-botlar, biznes va savdo jarayonlarini avtomatlashtirish</td>
+        </tr>
+        <tr>
+          <td>Ma'lumotlar Bazasi</td>
+          <td>PostgreSQL, MySQL, MongoDB, Supabase</td>
+        </tr>
+        <tr>
+          <td>Ish Qurollari</td>
+          <td>Git, GitHub Pages, VS Code, API Testing, Docker, Linux / Terminal</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ASOSIY LOYIHALAR -->
+  <div class="cv-section">
+    <div class="cv-section-title">Asosiy Loyihalar</div>
+
+    <div class="proj-item">
+      <div class="proj-header">
+        <div class="proj-name">1. AI-CRM — Sun'iy Intellektga Asoslangan CRM Tizimi</div>
+        <div class="proj-links">
+          GitHub: <a href="https://github.com/xojamurod04-gif" target="_blank">xojamurod04-gif</a>
+        </div>
+      </div>
+      <div class="proj-direction">Full Stack &amp; AI Integration</div>
+      <div class="proj-desc">
+        Mijozlar bilan munosabatlarni boshqarish, savdo oqimini tahlil qilish va kundalik biznes jarayonlarini sun'iy intellekt yordamida avtomatlashtirishga mo'ljallangan veb-platforma. Telefon qo'ng'iroqlari, Telegram va Instagram orqali bo'ladigan muloqotlarni Claude AI yordamida avtomatik tahlil qiladi va operatorlar samaradorligini baholaydi.
+      </div>
+    </div>
+
+    <hr class="divider-light" />
+
+    <div class="proj-item">
+      <div class="proj-header">
+        <div class="proj-name">2. Bozor Bot — Elektron Tijorat va Savdo Boti</div>
+        <div class="proj-links">
+          GitHub: <a href="https://github.com/xojamurod04-gif/bozor-terminal-bot" target="_blank">bozor-terminal-bot</a>
+        </div>
+      </div>
+      <div class="proj-direction">Backend &amp; Telegram Bot API</div>
+      <div class="proj-desc">
+        Fond bozorini real vaqt rejimida kuzatish, investitsiya portfelini tahlil qilish va sun'iy intellekt yordamida aksiyalar bo'yicha prognozlar olishga mo'ljallangan Telegram Bot va Mini App platforma. Python, Supabase va AI integratsiyasi asosida qurilgan.
+      </div>
+    </div>
+
+    <hr class="divider-light" />
+
+    <div class="proj-item">
+      <div class="proj-header">
+        <div class="proj-name">3. Habit Tracker — Odatlarni Shakllantirish Mobil Ilovasi</div>
+        <div class="proj-links">
+          Google Play: mavjud |
+          GitHub: <a href="https://github.com/xojamurod04-gif/my-app" target="_blank">my-app</a>
+        </div>
+      </div>
+      <div class="proj-direction">Mobile Application Development</div>
+      <div class="proj-desc">
+        Kundalik foydali odatlarni rejalashtrish, bajarilish statistikasini kuzatib borish va shaxsiy samaradorlikni oshirishga xizmat qiluvchi mobil ilova. React Native, Expo Router va TypeScript asosida ishlab chiqilgan, Google Play'da nashr etilgan.
+      </div>
+    </div>
+  </div>
+
+  <!-- TA'LIM VA QO'SHIMCHA -->
+  <div class="cv-section">
+    <div class="cv-section-title">Ta'lim va Qo'shimcha Ma'lumotlar</div>
+    <ul class="info-list">
+      <li>
+        <span class="info-label">Ta'lim:</span>
+        <span>Axborot texnologiyalari va dasturiy injiniring yo'nalishi</span>
+      </li>
+      <li>
+        <span class="info-label">Tillar:</span>
+        <span>O'zbek tili (Ona tili) · Ingliz tili (Texnik hujjatlarni tushunish — Reading / Listening) · Rus tili (Og'zaki va yozma nutqni tushunish — Reading / Listening)</span>
+      </li>
+      <li>
+        <span class="info-label">Fazilatlar:</span>
+        <span>Muammolarga tezkor texnik yechim topish · Yangi texnologiyalarni tez o'zlashtirish · Jamoada samarali ishlash · Mustaqil va mas'uliyatli</span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="cv-footer">
+    <span>Arslanov Xo'jamurod — CV / Rezyume</span>
+    <span>2026 · xojamurod04@gmail.com</span>
+  </div>
+
+</div>
+
+</body>
+</html>
