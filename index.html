@@ -422,6 +422,40 @@
       display: inline-flex; align-items: center; gap: 8px;
     }
     .btn-cv:hover { border-color: var(--purple-light); background: rgba(108,58,237,0.1); transform: translateY(-3px); }
+
+    /* ═══ EXPERIENCE ═══ */
+    .exp-block {
+      margin: 24px 0 28px;
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      background: var(--card-bg);
+      overflow: hidden;
+    }
+    .exp-title {
+      font-size: 12px; font-weight: 800; letter-spacing: 1.5px;
+      text-transform: uppercase; color: var(--gray2);
+      padding: 12px 18px 10px;
+      border-bottom: 1px solid var(--card-border);
+    }
+    .exp-item { padding: 16px 18px; }
+    .exp-header {
+      display: flex; justify-content: space-between;
+      align-items: flex-start; gap: 12px; margin-bottom: 8px;
+    }
+    .exp-role { font-size: 15px; font-weight: 700; color: var(--white); }
+    .exp-company {
+      font-size: 13px; font-weight: 600;
+      color: var(--purple-light); margin-top: 2px;
+    }
+    .exp-date {
+      font-size: 12px; font-weight: 500; color: var(--gray2);
+      white-space: nowrap;
+      background: rgba(108,58,237,0.12);
+      border: 1px solid rgba(108,58,237,0.2);
+      padding: 4px 10px; border-radius: 20px;
+      flex-shrink: 0;
+    }
+    .exp-desc { font-size: 13px; color: var(--gray); line-height: 1.65; }
   </style>
 </head>
 <body>
@@ -510,6 +544,22 @@
       <br/><br/>
       Har bir loyihaga tartibli arxitektura, o'qilishi oson kod va foydalanuvchi tajribasini birinchi o'ringa qo'ygan holda yondashaman.
     </p>
+
+    <!-- Ish Tajribasi -->
+    <div class="exp-block">
+      <div class="exp-title">💼 Ish Tajribasi</div>
+      <div class="exp-item">
+        <div class="exp-header">
+          <div>
+            <div class="exp-role">Junior Software Engineer</div>
+            <div class="exp-company">Skill Hub</div>
+          </div>
+          <div class="exp-date">2024 — hozirgi kun</div>
+        </div>
+        <div class="exp-desc">Veb va mobil ilovalar ishlab chiqish, AI integratsiyalari va Telegram bot tizimlari yaratish bo'yicha amaliy tajriba orttirmoqda.</div>
+      </div>
+    </div>
+
     <button class="btn-main" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">🤝 Hamkorlik Qilamiz</button>
   </div>
 
@@ -653,7 +703,7 @@
           <span class="proj-tag">TYPESCRIPT</span>
         </div>
         <h3 class="proj-title">Habit Tracker</h3>
-        <p class="proj-desc">Kundalik foydali odatlarni shakllantirish, shaxsiy unumdorlikni nazorat qilish va bajarilgan vazifalar statistikasini yuritish uchun mobil ilova — Google Play'da mavjud.</p>
+        <p class="proj-desc">Kundalik foydali odatlarni shakllantirish, shaxsiy unumdorlikni nazorat qilish va bajarilgan vazifalar statistikasini yuritish uchun mobil ilova — Google Play uchun tayyorlanmoqda.</p>
         <div class="proj-actions">
           <span class="proj-btn-soon" title="Google Play linki tez kunda">🔒 Tez kunda</span>
           <a href="https://github.com/xojamurod04-gif/my-app" target="_blank" rel="noopener noreferrer" class="proj-btn-code" aria-label="Habit Tracker GitHub kodi">⌨ Kod</a>
@@ -671,14 +721,14 @@
     <h2 class="contact-title">Birgalikda <span class="accent">Nimadir</span> Quramiz?</h2>
     <p class="contact-sub">Loyihangiz haqida gapirishga tayyorman. Menga yozing — 24 soat ichida javob beraman!</p>
     <a href="mailto:xojamurod04@gmail.com" class="contact-email">xojamurod04@gmail.com</a>
-    <div style="font-size:14px;color:var(--gray);margin-bottom:28px;">📞 +998 93 290-23-15</div>
+    <a href="tel:+998932902315" style="font-size:14px;color:var(--gray);margin-bottom:28px;display:block;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='var(--gray)'">📞 +998 93 290-23-15</a>
     <div class="social-row">
       <a href="https://github.com/xojamurod04-gif" target="_blank" rel="noopener noreferrer" class="soc-btn" title="GitHub" aria-label="GitHub profili">🐙</a>
       <a href="https://t.me/arslonov2315" target="_blank" rel="noopener noreferrer" class="soc-btn" title="Telegram" aria-label="Telegram">✈️</a>
       <a href="https://www.instagram.com/arslonov_xojamurod" target="_blank" rel="noopener noreferrer" class="soc-btn" title="Instagram" aria-label="Instagram">📸</a>
       <a href="https://www.linkedin.com/in/xojamurod-arslanov-b34095340" target="_blank" rel="noopener noreferrer" class="soc-btn" title="LinkedIn" aria-label="LinkedIn">💼</a>
     </div>
-    <a href="mailto:xojamurod04@gmail.com" style="text-decoration:none;display:block" aria-label="Email yuborish"><button class="contact-btn">✉️ Xabar Yuborish</button></a>
+    <a href="mailto:xojamurod04@gmail.com" style="text-decoration:none;display:block"><button class="contact-btn">✉️ Xabar Yuborish</button></a>
   </div>
 </section>
 
